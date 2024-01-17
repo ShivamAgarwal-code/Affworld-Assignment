@@ -16,7 +16,7 @@ export default function ResetPassword() {
   async function resetPassword(data) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/resetPassword/${email}/${token}`,
+        `/api/auth/resetPassword/${email}/${token}`,
         {
           method: "POST",
           headers: {

@@ -21,7 +21,7 @@ export default function SecretInput() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/secrets/add", {
+      const response = await fetch("/api/secrets/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

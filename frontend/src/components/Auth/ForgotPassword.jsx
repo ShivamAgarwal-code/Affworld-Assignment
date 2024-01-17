@@ -15,16 +15,13 @@ export default function ForgotPassword() {
   async function handleForgotPassword(data) {
     console.log(data);
     try {
-      const response = await fetch(
-        "http://localhost:5000/api/auth/forgotPassword",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch("/api/auth/forgotPassword", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
       if (response.ok) {
         const result = await response.json();
 

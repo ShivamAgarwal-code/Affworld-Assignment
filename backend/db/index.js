@@ -3,6 +3,6 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
 mongoose
-  .connect("mongodb://localhost:27017/Secret")
+  .connect(process.env.MONOGODB_URI)
   .then(() => console.log("Connected mongo db"))
   .catch((e) => console.log(e));

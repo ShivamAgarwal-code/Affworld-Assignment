@@ -98,7 +98,7 @@ const forgotPassword = async (req, res) => {
   });
 
   const resetPageLink =
-    "http://localhost:5173/resetPassword?token=" + token + "&email=" + email;
+    "http://localhost:5000/resetPassword?token=" + token + "&email=" + email;
 
   var mailOptions = {
     from: "Affworld Assignment 1",

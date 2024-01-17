@@ -12,7 +12,7 @@ export default function GlobalState({ children }) {
   async function fetchListOfSecrets() {
     setPending(true);
     try {
-      const response = await fetch("http://localhost:5000/api/secrets");
+      const response = await fetch("/api/secrets");
       const data = await response.json();
       if (data && data.secrets && data.secrets.length) {
         setSecretList(data.secrets);
@@ -38,7 +38,7 @@ export default function GlobalState({ children }) {
 
   const userAuthentication = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/user", {
+      const response = await fetch("/api/auth/user", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
